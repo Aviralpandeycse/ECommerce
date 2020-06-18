@@ -1,0 +1,23 @@
+<table class="table">
+	<thead class="thead-dark">
+		<tr>
+      <th></th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Units In Stock</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr *ngFor="let prod of products">
+      <td class="align-middle">
+        <img src="{{ prod.imageUrl }}" height="50">
+      </td>
+			<td class="align-middle">{{prod.name}}</td>
+			<td class="align-middle">{{prod.unitPrice | currency:'USD'}}</td>
+			<td class="align-middle">{{prod.unitsInStock}}</td>
+		</tr>
+
+	</tbody>
+
+</table>
